@@ -3443,9 +3443,10 @@ spret cast_absolute_zero(int pow, bool fail)
         god_conduct_trigger conducts[3];
         set_attack_conducts(conducts, *mon, you.can_see(*mon));
 
+        const coord_def pos = mon->pos();
         glaciate_freeze(mon, KILL_YOU, actor_to_death_source(&you));
 
-        noisy(spell_effect_noise(SPELL_ABSOLUTE_ZERO), mon->pos(), MID_PLAYER);
+        noisy(spell_effect_noise(SPELL_ABSOLUTE_ZERO), pos, you.mid);
     }
 
     return spret::success;
