@@ -1926,7 +1926,7 @@ static spret _do_cast(spell_type spell, int powc, const dist& spd,
 
     case SPELL_HAILSTORM:
         return cast_hailstorm(powc, fail);
-        
+
     case SPELL_ABSOLUTE_ZERO:
         return cast_absolute_zero(powc, fail);
 
