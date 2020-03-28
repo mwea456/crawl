@@ -82,4 +82,4 @@ void actor_apply_toxic_bog(actor *act);
 
 spret cast_frozen_ramparts(int pow, bool fail);
 
-spret cast_absolute_zero(int pow, bool fail);
+spret cast_absolute_zero(int pow, bool fail, bool tracer = false);

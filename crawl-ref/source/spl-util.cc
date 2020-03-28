@@ -1373,6 +1373,7 @@ bool spell_no_hostile_in_range(spell_type spell)
 {
     const int range = calc_spell_range(spell, 0);
     const int minRange = get_dist_to_nearest_monster();
+    const int pow = calc_spell_power(spell, true, false, true);
 
     switch (spell)
     {
@@ -1437,8 +1438,10 @@ bool spell_no_hostile_in_range(spell_type spell)
         return cast_hailstorm(-1, false, true) == spret::abort;
 
     case SPELL_DAZZLING_FLASH:
-        return cast_dazzling_flash(calc_spell_power(spell, true, false, true),
-                                   false, true) == spret::abort;
+        return cast_dazzling_flash(pow, false, true) == spret::abort;
+
+     case SPELL_ABSOLUTE_ZERO:
+         return cast_absolute_zero(pow, false, true) == spret::abort;
 
     default:
         break;

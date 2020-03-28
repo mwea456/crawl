@@ -3420,10 +3420,18 @@ static monster* _closest_target_in_range(int radius)
     return nullptr;
 }
 
-spret cast_absolute_zero(int pow, bool fail)
+spret cast_absolute_zero(int pow, bool fail, bool tracer)
 {
     monster* const mon = _closest_target_in_range(
             spell_range(SPELL_ABSOLUTE_ZERO, pow));
+
+     if (tracer)
+     {
+         if (!mon)
+             return spret::abort;
+         else
+             return spret::success;
+     }
 
     if (mon && you.can_see(*mon) && stop_attack_prompt(mon, false, mon->pos()))
         return spret::abort;
