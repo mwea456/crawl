@@ -91,6 +91,7 @@ enum monster_info_flags
     MB_NAME_ZOMBIE,
     MB_PERM_SUMMON,
     MB_INNER_FLAME,
+    MB_BOMB_ATTACHED,
     MB_UMBRAED,
 #if TAG_MAJOR_VERSION == 34
     MB_OLD_ROUSED,

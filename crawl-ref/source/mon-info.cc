@@ -77,6 +77,7 @@ static map<enchant_type, monster_info_flags> trivial_ench_mb_mappings = {
     { ENCH_DUMB,            MB_DUMB },
     { ENCH_MAD,             MB_MAD },
     { ENCH_INNER_FLAME,     MB_INNER_FLAME },
+    { ENCH_BOMB_ATTACHED,   MB_BOMB_ATTACHED },
     { ENCH_BREATH_WEAPON,   MB_BREATH_WEAPON },
     { ENCH_OZOCUBUS_ARMOUR, MB_OZOCUBUS_ARMOUR },
     { ENCH_WRETCHED,        MB_WRETCHED },

@@ -94,6 +94,7 @@ enum enchant_type
     ENCH_SILVER_CORONA,  // Zin's silver light.
     ENCH_RECITE_TIMER,   // Was recited against.
     ENCH_INNER_FLAME,
+    ENCH_BOMB_ATTACHED,  // For Kimchi's Goblin-Bomber
 #if TAG_MAJOR_VERSION == 34
     ENCH_OLD_ROUSED,
 #endif

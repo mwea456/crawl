@@ -1897,6 +1897,8 @@ tileidx_t tileidx_monster(const monster_info& mons)
         ch |= TILE_FLAG_STICKY_FLAME;
     if (mons.is(MB_INNER_FLAME))
         ch |= TILE_FLAG_INNER_FLAME;
+    if (mons.is(MB_BOMB_ATTACHED))
+        ch |= TILE_BOMB_ATTACHED;
     if (!mons.constrictor_name.empty())
         ch |= TILE_FLAG_CONSTRICTED;
     if (mons.is(MB_BERSERK))

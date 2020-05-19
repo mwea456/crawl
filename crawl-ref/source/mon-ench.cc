@@ -1992,7 +1992,7 @@ static const char *enchant_names[] =
 #endif
     "guardian_timer", "flight", "liquefying", "tornado", "fake_abjuration",
     "dazed", "mute", "blind", "dumb", "mad", "silver_corona", "recite timer",
-    "inner_flame",
+    "inner_flame", "bomb_attached",
 #if TAG_MAJOR_VERSION == 34
     "roused",
 #endif
