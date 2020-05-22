@@ -2546,6 +2546,17 @@ static const struct spell_desc spelldata[] =
 },
 
 {
+    SPELL_BOMB_ATTACHED, "Attach Sticky Bomb",
+    spschool::hexes | spschool::fire,
+    spflag::none | spflag::selfench | spflag::monster,
+    3,
+    100,
+    -1, -1,
+    3, 0,
+    TILEG_GENERIC_MONSTER_SPELL,
+},
+
+{
     SPELL_BEASTLY_APPENDAGE, "Beastly Appendage",
     spschool::transmutation,
     spflag::helpful | spflag::chaotic,

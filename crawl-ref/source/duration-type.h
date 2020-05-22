@@ -206,5 +206,6 @@ enum duration_type
     DUR_WALL_MELTING2,
     DUR_COWARD,
     DUR_PAKELLAS_DURATION,    // duration of Pakellas Buff
+    DUR_BOMB_ATTACHED,        // when will bomb explodes?
     NUM_DURATIONS
 };
