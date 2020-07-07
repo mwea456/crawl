@@ -4380,7 +4380,7 @@ int get_sacrifice_piety(ability_type sac, bool include_skill)
         case ABIL_RU_SACRIFICE_ESSENCE:
             if (mut == MUT_LOW_MAGIC)
             {
-                piety_gain += 10 + max(you.skill_rdiv(SK_INVOCATIONS, 1, 2),
+                piety_gain += 15 + max(you.skill_rdiv(SK_INVOCATIONS, 1, 2),
                                        max( you.skill_rdiv(SK_SPELLCASTING, 1, 2),
                                             you.skill_rdiv(SK_EVOCATIONS, 1, 2)));
             }
@@ -5062,7 +5062,7 @@ void ru_reset_sacrifice_timer(bool clear_timer, bool faith_penalty)
 
     // raise the delay if there's an active sacrifice, and more so the more
     // often you pass on a sacrifice and the more piety you have.
-    const int base_delay = 80;
+    const int base_delay = 30;
     int delay = you.props[RU_SACRIFICE_DELAY_KEY].get_int();
     int added_delay;
     if (clear_timer)
@@ -5077,7 +5077,7 @@ void ru_reset_sacrifice_timer(bool clear_timer, bool faith_penalty)
         // based on piety. This extra delay stacks with any added delay for
         // previous rejections.
         added_delay = you.props[RU_SACRIFICE_PENALTY_KEY].get_int();
-        const int new_penalty = (max(100, static_cast<int>(you.piety))) / 3;
+        const int new_penalty = (max(30, static_cast<int>(you.piety))) / 3;
         added_delay += new_penalty;
 
         // longer delay for each real rejection
@@ -5116,7 +5116,7 @@ bool will_ru_retaliate()
 // Power of retribution increases with damage, decreases with monster HD.
 void ru_do_retribution(monster* mons, int damage)
 {
-    int power = max(0, random2(div_rand_round(you.piety*10, 32))
+    int power = max(10, random2(div_rand_round(you.piety*20, 32))
         + damage - (2 * mons->get_hit_dice()));
     const actor* act = &you;
 
@@ -5184,13 +5184,13 @@ void ru_draw_out_power()
     you.duration[DUR_SLOW] = 0;
     you.duration[DUR_PETRIFYING] = 0;
 
-    int hp_inc = div_rand_round(you.piety, 16);
-    hp_inc += roll_dice(div_rand_round(you.piety, 20), 6);
+    int hp_inc = div_rand_round(you.piety, 8);
+    hp_inc += roll_dice(div_rand_round(you.piety, 10), 7);
     inc_hp(hp_inc);
-    int mp_inc = div_rand_round(you.piety, 48);
-    mp_inc += roll_dice(div_rand_round(you.piety, 40), 4);
+    int mp_inc = div_rand_round(you.piety, 24);
+    mp_inc += roll_dice(div_rand_round(you.piety, 20), 5);
     inc_mp(mp_inc);
-    drain_player(30, false, true);
+    drain_player(5, false, true);
 }
 
 bool ru_power_leap()
@@ -5218,7 +5218,7 @@ bool ru_power_leap()
         direction_chooser_args args;
         args.restricts = DIR_LEAP;
         args.mode = TARG_ANY;
-        args.range = 3;
+        args.range = 4;
         args.needs_path = false;
         args.top_prompt = "Aiming: <white>Power Leap</white>";
         args.self = confirm_prompt_type::cancel;
@@ -5337,8 +5337,8 @@ bool ru_power_leap()
         ASSERT(mon);
 
         //damage scales with XL amd piety
-        mon->hurt((actor*)&you, roll_dice(1 + div_rand_round(you.piety *
-            (54 + you.experience_level), 777), 3),
+        mon->hurt((actor*)&you, roll_dice(3 + div_rand_round(you.piety *
+            (72 + you.experience_level), 777), 3),
             BEAM_ENERGY, KILLED_BY_BEAM, "", "", true);
     }
 
@@ -5377,21 +5377,21 @@ static int _apply_apocalypse(coord_def where)
                 message = " doubts " + mons->pronoun(PRONOUN_POSSESSIVE)
                           + " magic when faced with ultimate truth!";
                 enchantment = ENCH_ANTIMAGIC;
-                duration = 500 + random2(200);
+                duration = 700 + random2(300);
                 num_dice = 4;
                 break;
             } // if not antimagicable, fall through to paralysis.
         case 1:
             message = " is paralysed by terrible understanding!";
             enchantment = ENCH_PARALYSIS;
-            duration = 80 + random2(60);
+            duration = 300 + random2(100);
             num_dice = 4;
             break;
 
         case 2:
             message = " slows down under the weight of truth!";
             enchantment = ENCH_SLOW;
-            duration = 300 + random2(100);
+            duration = 500 + random2(200);
             num_dice = 6;
             break;
 
@@ -5402,8 +5402,8 @@ static int _apply_apocalypse(coord_def where)
 
     //damage scales with XL and piety
     const int pow = you.piety;
-    int die_size = 1 + div_rand_round(pow * (54 + you.experience_level), 584);
-    int dmg = 10 + roll_dice(num_dice, die_size);
+    int die_size = 5 + div_rand_round(pow * (72 + you.experience_level), 584);
+    int dmg = 40 + roll_dice(num_dice, die_size);
 
     mons->hurt(&you, dmg, BEAM_ENERGY, KILLED_BY_BEAM, "", "", true);
 
@@ -5429,7 +5429,7 @@ bool ru_apocalypse()
     mpr("You reveal the great annihilating truth to your foes!");
     noisy(30, you.pos());
     apply_area_visible(_apply_apocalypse, you.pos());
-    drain_player(100, false, true);
+    drain_player(40, false, true);
     return true;
 }
 
