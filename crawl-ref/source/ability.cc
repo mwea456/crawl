@@ -2439,7 +2439,7 @@ static spret _do_ability(const ability_def& abil, bool fail)
             you.duration[DUR_RECITE] = 3 * BASELINE_DELAY;
             mprf("You clear your throat and prepare to recite.");
             you.increase_duration(DUR_RECITE_COOLDOWN,
-                                  3 + random2(10) + random2(30));
+                                  1 + random2(5) + random2(10));
         }
         else
         {
@@ -2491,7 +2491,7 @@ static spret _do_ability(const ability_def& abil, bool fail)
 
         fail_check();
 
-        int power = 3 + (roll_dice(5, you.skill(SK_INVOCATIONS, 5) + 12) / 26);
+        int power = 10 + (roll_dice(10, you.skill(SK_INVOCATIONS, 5) + 15) / 20);
 
         if (!cast_imprison(power, mons, -GOD_ZIN))
             return spret::abort;
