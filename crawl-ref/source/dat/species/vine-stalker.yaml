@@ -5,30 +5,31 @@ short_name: VS
 difficulty: Advanced
 difficulty_priority: 100
 aptitudes:
-  xp: 0
-  hp: -3
-  mp_mod: 1
-  mr: 5
-  fighting: -1
-  short_blades: -1
-  long_blades: -1
-  axes: -1
-  maces_and_flails: -1
-  polearms: -1
-  staves: -1
+  xp: 1
+  hp: -1
+  mp_mod: 3
+  mr: 9
+  fighting: 2
+  short_blades: 5
+  long_blades: 1
+  axes: -3
+  maces_and_flails: -2
+  polearms: -2
+  staves: -5
   slings: -1
-  bows: -1
+  bows: -4
   crossbows: -1
   throwing: -1
-  armour: -2
-  dodging: -2
-  stealth: 3
-  shields: -1
-  evocations: -1
-str: 10
-int: 8
-dex: 9
-levelup_stat_frequency: 4
+  armour: 1
+  dodging: 2
+  stealth: 5
+  shields: 1
+  invocations: 2
+  evocations: 1
+str: 14
+int: 11
+dex: 13
+levelup_stat_frequency: 3
 levelup_stats:
   - str
   - dex
@@ -39,12 +40,22 @@ mutations:
     MUT_ANTIMAGIC_BITE: 1
     MUT_NO_POTION_HEAL: 3
     MUT_ROT_IMMUNITY: 1
+    MUT_MANA_REGENERATION: 1
+    MUT_SLOW_METABOLISM: 2
+    MUT_MAGIC_RESISTANCE: 3
+    MUT_NIGHTSTALKER: 1
+    MUT_STOCHASTIC_TORMENT_RESISTANCE: 1
   4:
     MUT_REGENERATION: 1
+    MUT_NIGHTSTALKER: 1
+    MUT_NEGATIVE_ENERGY_RESISTANCE: 1
   8:
     MUT_FANGS: 1
+    MUT_NIGHTSTALKER: 1
+    MUT_NEGATIVE_ENERGY_RESISTANCE: 1
   12:
-    MUT_REGENERATION: 1
+    MUT_REGENERATION: 2
+    MUT_AUGMENTATION: 3
 recommended_jobs:
   - JOB_FIGHTER
   - JOB_ASSASSIN
