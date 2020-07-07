@@ -7,27 +7,48 @@ genus: "Octopus"
 difficulty: Advanced
 difficulty_priority: 50
 aptitudes:
-  xp: 0
+  xp: 1
   hp: -1
-  mp_mod: 0
-  mr: 3
+  mp_mod: 2
+  mr: 7
+  fighting: 2
   armour: False
   stealth: 4
-  spellcasting: -1
-  poison_magic: 2
-  invocations: 1
-  evocations: 1
+  spellcasting: 2
+  hexes: 1
+  charms: 1
+  summoning: 4
+  translocations: 1
+  transmutations: 1
+  fire_magic: -2
+  poison_magic: 3
+  invocations: 2
+  evocations: 2
 can_swim: true
-str: 7
-int: 10
-dex: 7
-levelup_stat_frequency: 5
+str: 13
+int: 15
+dex: 9
+levelup_stat_frequency: 3
 species_flags:
   - hairless
 mutations:
   1:
-    MUT_CAMOUFLAGE: 1
-    MUT_GELATINOUS_BODY: 1
+    MUT_CAMOUFLAGE: 3
+    MUT_GELATINOUS_BODY: 3
+    MUT_POISON_RESISTANCE: 1
+    MUT_NEGATIVE_ENERGY_RESISTANCE: 1
+    MUT_SLOW_METABOLISM: 2
+    MUT_CLARITY: 1
+    MUT_MAGIC_RESISTANCE: 2
+    MUT_REGENERATION: 3
+    MUT_STOCHASTIC_TORMENT_RESISTANCE: 1
+    MUT_EYEBALLS: 1
+    MUT_MUTATION_RESISTANCE: 2
+    MUT_TRANSLUCENT_SKIN: 1
+  5:
+    MUT_PSEUDOPODS: 1
+  10:
+    MUT_TENDRILS: 1
 fake_mutations:
   - long: You cannot wear most types of armour.
     short: almost no armour
