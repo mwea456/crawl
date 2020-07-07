@@ -1385,13 +1385,13 @@ bool does_ru_wanna_redirect(monster* mon)
 ru_interference get_ru_attack_interference_level()
 {
     int r = random2(100);
-    int chance = div_rand_round(you.piety, 16);
+    int chance = div_rand_round(you.piety, 8);
 
-    // 10% chance of stopping any attack at max piety
+    // 20% chance of stopping any attack at max piety
     if (r < chance)
         return DO_BLOCK_ATTACK;
 
-    // 5% chance of redirect at max piety
+    // 10% chance of redirect at max piety
     else if (r < chance + div_rand_round(chance, 2))
         return DO_REDIRECT_ATTACK;
 
