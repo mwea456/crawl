@@ -57,8 +57,10 @@ mutations:
     MUT_MANA_REGENERATION: 1
   5:
     MUT_ACUTE_VISION: 1
+    MUT_SANGUINE_ARMOUR: 3
   10:
     MUT_TENGU_FLIGHT: 1
+    MUT_AUGMENTATION: 3
 fake_mutations:
   - long: You have a halo.
     short: halo
