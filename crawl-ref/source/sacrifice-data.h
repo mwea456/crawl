@@ -59,7 +59,7 @@ static const sacrifice_def sac_data[] =
   "corrupt yourself such that",
   "sacrificed essence",
 
-  0,
+  10,
   SK_NONE,
   ESSENCE_SAC_KEY,
   nullptr,
@@ -69,7 +69,7 @@ static const sacrifice_def sac_data[] =
   "corrupt yourself such that",
   "sacrificed health",
 
-  25,
+  35,
   SK_NONE,
   HEALTH_SAC_KEY,
   nullptr,
@@ -89,7 +89,7 @@ static const sacrifice_def sac_data[] =
   "sacrifice all use of magical tools",
   "sacrificed evocations",
 
-  55,
+  60,
   SK_EVOCATIONS,
   nullptr,
   nullptr,
@@ -119,7 +119,7 @@ static const sacrifice_def sac_data[] =
   "sacrifice all use of",
   "sacrificed arcana",
 
-  25,
+  35,
   SK_NONE,
   ARCANA_SAC_KEY,
   []() { return !_player_sacrificed_arcana(); },
@@ -129,7 +129,7 @@ static const sacrifice_def sac_data[] =
   "sacrifice your Dodging skill",
   "sacrificed dodging",
 
-  30,
+  35,
   SK_DODGING,
   nullptr,
   nullptr,
@@ -139,7 +139,7 @@ static const sacrifice_def sac_data[] =
   "sacrifice your Armour skill",
   "sacrificed armour",
 
-  30,
+  35,
   SK_ARMOUR,
   nullptr,
   []() { return you_can_wear(EQ_BODY_ARMOUR) != MB_FALSE; },
@@ -179,7 +179,7 @@ static const sacrifice_def sac_data[] =
   "sacrifice an eye",
   "sacrificed an eye",
 
-  20,
+  25,
   SK_NONE,
   nullptr,
   nullptr,
