@@ -6,12 +6,12 @@ adjective: "Hydrous"
 genus: "Hydra"
 difficulty : Intermediate
 aptitudes:
-  xp: -1
-  hp: -2
+  xp: 1
+  hp: 3
   mp_mod: 0
-  mr: 5
-  fighting : 2
-  unarmed_combat : 2
+  mr: 7
+  fighting : 5
+  unarmed_combat : 5
   short_blades: False
   long_blades: False
   axes: False
@@ -22,35 +22,50 @@ aptitudes:
   bows: False
   crossbows: False
   armour: -2
-  dodging: -2
-  stealth: -2
+  dodging: 2
+  stealth: 1
   shields: False
-  spellcasting: -3
+  spellcasting: 1
   conjurations: -2
-  summoning: -3
+  summoning: 1
   necromancy: -3
-  hexes: -2
-  charms: -2
-  translocations: -2
-  transmutations: -2
-  fire_magic: -3
-  ice_magic: -2
+  hexes: -1
+  charms: -1
+  translocations: -1
+  transmutations: 4
+  fire_magic: -5
+  ice_magic: -5
   air_magic: -2
-  earth_magic: -2
-  poison_magic: -2
-  evocations: 1
+  earth_magic: 2
+  poison_magic: 2
+  invocations: 2
+  evocations: 2
 can_swim : true
 size: big
-str: 6
-int: 6
-dex: 6
-levelup_stat_frequency: 4
+str: 18
+int: 8
+dex: 12
+levelup_stat_frequency: 3
 mutations:
   1:
     MUT_DEFORMED : 1
-    MUT_REGENERATION : 2
+    MUT_FANGS: 3
+    MUT_REGENERATION : 3
     MUT_POISON_RESISTANCE : 1
+    MUT_ACID_RESISTANCE: 1
     MUT_COLD_BLOODED: 1
+    MUT_SLOW_METABOLISM: 1
+    MUT_TOUGH_SKIN: 3
+    MUT_ACUTE_VISION: 1
+    MUT_STOCHASTIC_TORMENT_RESISTANCE: 1
+    MUT_FAST: 2
+    MUT_STINGER: 3
+  10:
+    MUT_SANGUINE_ARMOUR: 3
+    MUT_POWERED_BY_DEATH: 1
+  20:
+    MUT_POWERED_BY_DEATH: 2
+    MUT_AUGMENTATION: 3
 fake_mutations:
   - long: You are incapable of wielding weapons.
     short: no weapons.
