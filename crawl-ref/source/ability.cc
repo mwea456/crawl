@@ -3331,7 +3331,7 @@ static spret _do_ability(const ability_def& abil, bool fail)
             return spret::abort;
         }
         ru_draw_out_power();
-        you.increase_duration(DUR_EXHAUSTED, 12 + random2(5));
+        you.increase_duration(DUR_EXHAUSTED, 5 + random2(2));
         break;
 
     case ABIL_RU_POWER_LEAP:
@@ -3351,7 +3351,7 @@ static spret _do_ability(const ability_def& abil, bool fail)
             canned_msg(MSG_OK);
             return spret::abort;
         }
-        you.increase_duration(DUR_EXHAUSTED, 18 + random2(8));
+        you.increase_duration(DUR_EXHAUSTED, 8 + random2(3));
         break;
 
     case ABIL_RU_APOCALYPSE:
@@ -3365,7 +3365,7 @@ static spret _do_ability(const ability_def& abil, bool fail)
 
         if (!ru_apocalypse())
             return spret::abort;
-        you.increase_duration(DUR_EXHAUSTED, 30 + random2(20));
+        you.increase_duration(DUR_EXHAUSTED, 12 + random2(10));
         break;
 
     case ABIL_PAKELLAS_DEVICE_SURGE:
