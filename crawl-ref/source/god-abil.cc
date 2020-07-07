@@ -765,8 +765,8 @@ int zin_recite_power()
     // Anything at or above (30+30)/2 = 30 'power' (HD) is completely immune.
     const int power_mult = 10;
     const int invo_power = you.skill_rdiv(SK_INVOCATIONS, power_mult)
-                           + 3 * power_mult;
-    const int piety_power = you.piety * 3 / 2;
+                           + 5 * power_mult;
+    const int piety_power = you.piety * 4 / 2;
     return (invo_power + piety_power) / 2 / power_mult;
 }
 
@@ -898,7 +898,7 @@ bool zin_recite_to_single_monster(const coord_def& where)
 
     const int power = zin_recite_power();
     // Old recite was mostly deterministic, which is bad.
-    const int resist = mon->get_hit_dice() + random2(6);
+    const int resist = mon->get_hit_dice() + random2(5);
     const int check = power - resist;
 
     // We abort if we didn't *beat* their HD - but first we might get a cute message.
@@ -916,7 +916,7 @@ bool zin_recite_to_single_monster(const coord_def& where)
     // To what degree are they eligible for this prayertype?
     const int degree = eligibility[prayertype];
     const bool minor = degree <= (prayertype == RECITE_HERETIC ? 2 : 1);
-    const int spellpower = power * 2 + degree * 20;
+    const int spellpower = power * 3 + degree * 20;
     zin_eff effect = zin_eff::nothing;
 
     switch (prayertype)
@@ -1309,9 +1309,9 @@ bool zin_vitalisation()
 
     // Add divine stamina.
     const int stamina_amt =
-        max(1, you.skill_rdiv(SK_INVOCATIONS, 1, 3));
+        max(10, you.skill_rdiv(SK_INVOCATIONS, 2, 3));
     you.attribute[ATTR_DIVINE_STAMINA] = stamina_amt;
-    you.set_duration(DUR_DIVINE_STAMINA, 60 + roll_dice(2, 10));
+    you.set_duration(DUR_DIVINE_STAMINA, 90 + roll_dice(6, 10));
 
     notify_stat_change(STAT_STR, stamina_amt, true);
     notify_stat_change(STAT_INT, stamina_amt, true);
@@ -1394,13 +1394,13 @@ void tso_divine_shield()
     else
         mpr("Your divine shield is renewed.");
 
-    // Duration from 35-80 turns.
+    // Duration from 60-141 turns.
     you.set_duration(DUR_DIVINE_SHIELD,
-                     35 + you.skill_rdiv(SK_INVOCATIONS, 5, 3));
+                     60 + you.skill_rdiv(SK_INVOCATIONS, 9, 3));
 
     // Size of SH bonus.
     you.attribute[ATTR_DIVINE_SHIELD] =
-        12 + you.skill_rdiv(SK_INVOCATIONS, 4, 5);
+        18 + you.skill_rdiv(SK_INVOCATIONS, 3, 3);
 
     you.redraw_armour_class = true;
 }
@@ -1437,12 +1437,12 @@ bool elyvilon_divine_vigour()
         mprf("%s grants you divine vigour.",
              god_name(GOD_ELYVILON).c_str());
 
-        const int vigour_amt = 1 + you.skill_rdiv(SK_INVOCATIONS, 1, 3);
+        const int vigour_amt = 3 + you.skill_rdiv(SK_INVOCATIONS, 2, 3);
         const int old_hp_max = you.hp_max;
         const int old_mp_max = you.max_magic_points;
         you.attribute[ATTR_DIVINE_VIGOUR] = vigour_amt;
         you.set_duration(DUR_DIVINE_VIGOUR,
-                         40 + you.skill_rdiv(SK_INVOCATIONS, 5, 2));
+                         90 + you.skill_rdiv(SK_INVOCATIONS, 6, 2));
 
         calc_hp();
         inc_hp((you.hp_max * you.hp + old_hp_max - 1)/old_hp_max - you.hp);
