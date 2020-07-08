@@ -22,10 +22,10 @@ aptitudes:
   dodging: -1
   shields: 1
   spellcasting: 0
-  hexes: -1
-  charms: -1
+  charms: 1
   invocations: 2
   # Green Draconian specific
+  hexes: 2
   conjurations: 2
   poison_magic: 5
 str: 15
