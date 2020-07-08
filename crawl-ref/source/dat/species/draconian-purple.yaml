@@ -23,10 +23,11 @@ aptitudes:
   shields: 1
   invocations: 2
   # Purple Draconian specific
-  spellcasting: 4
-  hexes: 2
-  charms: 2
-  translocations: 2
+  spellcasting: 5
+  conjurations: 1
+  hexes: 3
+  charms: 3
+  translocations: 4
   evocations: 1
 str: 15
 int: 12
