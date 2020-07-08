@@ -8,34 +8,46 @@ difficulty: False
 species_flags:
   - draconian
 aptitudes:
-  xp: -1
-  hp: 1
-  mp_mod: 0
-  mr: 3
-  fighting: 1
+  xp: 1
+  hp: 3
+  mp_mod: 1
+  mr: 7
+  fighting: 4
   slings: -1
   bows: -1
   crossbows: -1
   throwing: -1
-  armour: -3
+  unarmed_combat: 3 
+  armour: -1
   dodging: -1
-  spellcasting: -1
-  hexes: -1
-  charms: -1
-  invocations: 1
+  shields: 1
+  spellcasting: 0
+  hexes: 1
+  invocations: 2
   # Grey Draconian specific
-  earth_magic: 2
-  air_magic: -2
+  conjurations: 1
+  charms: 3
+  earth_magic: 5
+  air_magic: -3
 can_swim: true
-str: 10
-int: 8
-dex: 6
-levelup_stat_frequency: 4
+str: 15
+int: 12
+dex: 12
+levelup_stat_frequency: 3
 mutations:
   1:
     MUT_COLD_BLOODED: 1
+    MUT_DEFORMED: 1
+    MUT_REGENERATION: 3
+    MUT_MANA_REGENERATION: 1
+    MUT_SLOW_METABOLISM: 2
+    MUT_FANGS: 3
+    MUT_ACUTE_VISION: 1
+    MUT_MAGIC_RESISTANCE: 2
   7:
     MUT_UNBREATHING: 1
+    MUT_TORMENT_RESISTANCE: 1
+    MUT_MUTATION_RESISTANCE: 2
   14:
     MUT_BIG_WINGS: 1
 fake_mutations:
