@@ -22,10 +22,10 @@ aptitudes:
   dodging: -1
   shields: 1
   spellcasting: 0
-  hexes: -1
-  charms: -1
+  charms: 1
   invocations: 2
   # Pale Draconian specific
+  hexes: 3
   fire_magic: 2
   air_magic: 2
   evocations: 2
