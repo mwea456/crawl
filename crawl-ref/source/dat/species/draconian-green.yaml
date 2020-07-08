@@ -8,34 +8,46 @@ difficulty: False
 species_flags:
   - draconian
 aptitudes:
-  xp: -1
-  hp: 1
-  mp_mod: 0
-  mr: 3
-  fighting: 1
+  xp: 1
+  hp: 3
+  mp_mod: 1
+  mr: 7
+  fighting: 4
   slings: -1
   bows: -1
   crossbows: -1
   throwing: -1
-  armour: -3
+  unarmed_combat: 3 
+  armour: -1
   dodging: -1
-  spellcasting: -1
+  shields: 1
+  spellcasting: 0
   hexes: -1
   charms: -1
-  invocations: 1
+  invocations: 2
   # Green Draconian specific
-  poison_magic: 2
-str: 10
-int: 8
-dex: 6
-levelup_stat_frequency: 4
+  conjurations: 2
+  poison_magic: 5
+str: 15
+int: 12
+dex: 12
+levelup_stat_frequency: 3
 mutations:
   1:
     MUT_COLD_BLOODED: 1
+    MUT_DEFORMED: 1
+    MUT_REGENERATION: 3
+    MUT_MANA_REGENERATION: 1
+    MUT_SLOW_METABOLISM: 2
+    MUT_FANGS: 3
+    MUT_ACUTE_VISION: 1
+    MUT_MAGIC_RESISTANCE: 2
   7:
     MUT_POISON_RESISTANCE: 1
+    MUT_ROT_IMMUNITY: 1
+    MUT_MUTATION_RESISTANCE: 1
   14:
-    MUT_STINGER: 1
+    MUT_STINGER: 3
     MUT_BIG_WINGS: 1
 fake_mutations:
   - long: You can breathe blasts of noxious fumes.
