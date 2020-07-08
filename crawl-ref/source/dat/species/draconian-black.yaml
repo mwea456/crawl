@@ -22,10 +22,10 @@ aptitudes:
   dodging: -1
   shields: 1
   spellcasting: 0
-  hexes: -1
-  charms: -1
+  hexes: 1
   invocations: 2
   # Black Draconian specific
+  charms: 2
   conjurations: 3
   air_magic: 5
   earth_magic: -2
