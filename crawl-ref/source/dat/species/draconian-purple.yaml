@@ -8,32 +8,48 @@ difficulty: False
 species_flags:
   - draconian
 aptitudes:
-  xp: -1
-  hp: 1
-  mp_mod: 0
-  mr: 6
-  fighting: 1
+  xp: 1
+  hp: 3
+  mp_mod: 1
+  mr: 10
+  fighting: 4
   slings: -1
   bows: -1
   crossbows: -1
   throwing: -1
-  armour: -3
+  unarmed_combat: 3 
+  armour: -1
   dodging: -1
-  invocations: 1
+  shields: 1
+  invocations: 2
   # Purple Draconian specific
-  spellcasting: 1
-  hexes: 1
-  charms: 1
+  spellcasting: 4
+  hexes: 2
+  charms: 2
+  translocations: 2
   evocations: 1
-str: 10
-int: 8
-dex: 6
-levelup_stat_frequency: 4
+str: 15
+int: 12
+dex: 12
+levelup_stat_frequency: 3
 mutations:
   1:
     MUT_COLD_BLOODED: 1
+    MUT_DEFORMED: 1
+    MUT_REGENERATION: 3
+    MUT_MANA_REGENERATION: 1
+    MUT_SLOW_METABOLISM: 2
+    MUT_FANGS: 3
+    MUT_ACUTE_VISION: 1
+    MUT_MAGIC_RESISTANCE: 3
+  7:
+    MUT_CLARITY: 1
+    MUT_ANTIMAGIC_BITE: 1
   14:
     MUT_BIG_WINGS: 1
+    MUT_NEGATIVE_ENERGY_RESISTANCE: 1
+  26:
+    MUT_WILD_MAGIC: 1
 fake_mutations:
   - long: You can breathe bolts of dispelling energy.
     short: breathe power
