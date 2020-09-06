@@ -6,35 +6,52 @@ difficulty: Advanced
 difficulty_priority: 70
 aptitudes:
   xp: 1
-  hp: 0
+  hp: 1
   mp_mod: 0
-  mr: 4
-  fighting: 1
+  mr: 6
+  fighting: 2
+  long_blades: 1
+  axes: 1
+  staves: 1
   slings: 1
   bows: -2
-  armour: 1
+  armour: 3
   dodging: -1
   stealth: 3
-  shields: 2
+  shields: 3
+  spellcasting: 1
   conjurations: -1
   hexes: 2
+  charms: 1
+  summoning: 1
   translocations: -1
   transmutations: 1
   air_magic: -2
   earth_magic: 2
   poison_magic: 3
-  invocations: 2
+  invocations: 3
   evocations: 1
-str: 12
-int: 7
-dex: 6
-levelup_stat_frequency: 4
+str: 17
+int: 8
+dex: 7
+levelup_stat_frequency: 3
 levelup_stats:
   - str
   - int
 mutations:
   1:
     MUT_ANTENNAE: 3
+    MUT_STURDY_FRAME: 2
+    MUT_LARGE_BONE_PLATES: 3
+    MUT_CLARITY: 1
+    MUT_ACID_RESISTANCE: 1
+    MUT_POISON_RESISTANCE: 1
+    MUT_SLOW_METABOLISM: 2
+    MUT_STOCHASTIC_TORMENT_RESISTANCE: 1
+    MUT_NEGATIVE_ENERGY_RESISTANCE: 1
+  10:
+    MUT_ACIDIC_BITE: 1
+    MUT_REGENERATION: 1
 fake_mutations:
   - long: You cannot be hasted, slowed, berserked, paralysed or teleported.
     short: permanent stasis
