@@ -4,11 +4,11 @@ name: Mummy
 difficulty: Advanced
 difficulty_priority: 20
 aptitudes:
-  xp: -1
-  hp: 0
-  mp_mod: 0
-  mr: 5
-  short_blades: -2
+  xp: 0
+  hp: 1
+  mp_mod: 3
+  mr: 7
+  short_blades: 0
   long_blades: -2
   axes: -2
   maces_and_flails: -2
@@ -18,28 +18,29 @@ aptitudes:
   bows: -2
   crossbows: -2
   throwing: -2
-  armour: -2
-  dodging: -2
-  stealth: -1
-  shields: -2
-  unarmed_combat: -2
-  spellcasting: 2
-  conjurations: -2
-  hexes: -1
-  charms: -2
-  summoning: -2
-  translocations: -2
-  transmutations: -2
-  fire_magic: -2
-  ice_magic: -2
+  armour: 1
+  dodging: -1
+  stealth: 1
+  shields: -1
+  unarmed_combat: -1
+  spellcasting: 4
+  conjurations: -1
+  hexes: 1
+  charms: 1
+  summoning: 3
+  necromancy: 4
+  translocations: -1
+  transmutations: -3
+  fire_magic: -3
+  ice_magic: -1
   air_magic: -2
-  earth_magic: -2
-  poison_magic: -2
-  invocations: -1
-  evocations: -2
+  earth_magic: -1
+  poison_magic: 0
+  invocations: 0
+  evocations: -1
 undead_type: US_UNDEAD
-str: 11
-int: 7
+str: 13
+int: 11
 dex: 7
 levelup_stat_frequency: 5
 mutations:
@@ -48,10 +49,15 @@ mutations:
     MUT_COLD_RESISTANCE: 1
     MUT_TORMENT_RESISTANCE: 1
     MUT_UNBREATHING: 1
+    MUT_CLARITY: 1
+    MUT_MAGIC_RESISTANCE: 2
+    MUT_PASSIVE_MAPPING: 3
   13:
     MUT_NECRO_ENHANCER: 1
+    MUT_ACUTE_VISION: 1
   26:
     MUT_NECRO_ENHANCER: 1
+    MUT_WILD_MAGIC: 1
 fake_mutations:
   - long: You do not eat or drink.
     short: no food or potions
