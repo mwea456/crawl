@@ -24,7 +24,7 @@ aptitudes:
   charms: -1
   invocations: 1
   # Black Draconian specific
-  air_magic: 2
+  air_magic: 4
   earth_magic: -2
 str: 10
 int: 8
@@ -35,8 +35,12 @@ mutations:
     MUT_COLD_BLOODED: 1
   7:
     MUT_SHOCK_RESISTANCE: 1
+    MUT_FAST: 1
+    MUT_ACUTE_VISION: 1
   14:
     MUT_BIG_WINGS: 1
+    MUT_FAST: 1
+    MUT_AUGMENTATION: 2
 fake_mutations:
   - long: You can breathe wild blasts of lightning.
     short: breathe lightning
