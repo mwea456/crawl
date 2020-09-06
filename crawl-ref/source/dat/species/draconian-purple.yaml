@@ -11,7 +11,7 @@ aptitudes:
   xp: -1
   hp: 1
   mp_mod: 0
-  mr: 6
+  mr: 7
   fighting: 1
   slings: -1
   bows: -1
@@ -21,9 +21,9 @@ aptitudes:
   dodging: -1
   invocations: 1
   # Purple Draconian specific
-  spellcasting: 1
-  hexes: 1
-  charms: 1
+  spellcasting: 3
+  hexes: 2
+  charms: 2
   evocations: 1
 str: 10
 int: 8
@@ -32,8 +32,14 @@ levelup_stat_frequency: 4
 mutations:
   1:
     MUT_COLD_BLOODED: 1
+  7:
+    MUT_MAGIC_RESISTANCE: 2
+    MUT_MANA_REGENERATION: 1
+    MUT_CLARITY: 1
   14:
     MUT_BIG_WINGS: 1
+    MUT_MAGIC_RESISTANCE: 1
+    MUT_WILD_MAGIC: 1
 fake_mutations:
   - long: You can breathe bolts of dispelling energy.
     short: breathe power
