@@ -24,7 +24,7 @@ aptitudes:
   charms: -1
   invocations: 1
   # Red Draconian specific
-  fire_magic: 2
+  fire_magic: 4
   ice_magic: -2
 str: 10
 int: 8
@@ -35,8 +35,12 @@ mutations:
     MUT_COLD_BLOODED: 1
   7:
     MUT_HEAT_RESISTANCE: 1
+    MUT_FLAME_CLOUD_IMMUNITY: 1
+    MUT_IGNITE_BLOOD: 1
   14:
     MUT_BIG_WINGS: 1
+    MUT_HEAT_RESISTANCE: 1
+    MUT_HURL_DAMNATION: 1
 fake_mutations:
   - long: You can breathe blasts of fire.
     short: breathe fire
