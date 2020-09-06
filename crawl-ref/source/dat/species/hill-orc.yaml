@@ -8,12 +8,12 @@ species_flags:
   - orcish
 aptitudes:
   xp: 0
-  hp: 1
+  hp: 3
   mp_mod: 0
-  mr: 3
-  fighting: 2
+  mr: 4
+  fighting: 3
   long_blades: 1
-  axes: 3
+  axes: 4
   maces_and_flails: 1
   polearms: 1
   staves: -1
@@ -26,8 +26,8 @@ aptitudes:
   stealth: -1
   shields: 1
   unarmed_combat: 1
-  spellcasting: -3
-  charms: -1
+  spellcasting: -2
+  charms: 0
   translocations: -2
   transmutations: -3
   fire_magic: 1
@@ -35,12 +35,18 @@ aptitudes:
   air_magic: -2
   poison_magic: -1
   invocations: 3
-str: 10
+str: 14
 int: 8
-dex: 6
-levelup_stat_frequency: 5
+dex: 7
+levelup_stat_frequency: 4
 levelup_stats:
   - str
+mutations:
+  1:
+    MUT_STURDY_FRAME: 3
+    MUT_MUTATION_RESISTANCE: 1
+    MUT_AUGMENTATION: 1
+    MUT_REGENERATION: 1
 recommended_jobs:
   - JOB_FIGHTER
   - JOB_MONK
