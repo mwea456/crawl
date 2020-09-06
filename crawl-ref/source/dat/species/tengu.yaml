@@ -7,44 +7,49 @@ species_flags:
   - hairless
 aptitudes:
   xp: 0
-  hp: -2
-  mp_mod: 1
-  mr: 3
+  hp: 0
+  mp_mod: 2
+  mr: 7
+  fighting: 3
   short_blades: 1
-  long_blades: 1
+  long_blades: 4
   axes: 1
   maces_and_flails: 1
   polearms: 1
   staves: 1
   bows: 1
   crossbows: 1
-  armour: 1
-  dodging: 1
-  stealth: 1
+  armour: 2
+  dodging: 4
+  stealth: 2
   unarmed_combat: 1
-  spellcasting: -1
+  spellcasting: 3
   conjurations: 3
-  hexes: -3
-  charms: -2
+  hexes: 1
+  charms: 1
   summoning: 2
   necromancy: 1
-  translocations: -2
-  transmutations: -2
+  translocations: 1
+  transmutations: 1
   fire_magic: 1
-  ice_magic: -1
-  air_magic: 3
+  ice_magic: -3
+  air_magic: 5
   earth_magic: -3
   invocations: -1
-str: 8
-int: 8
-dex: 9
-levelup_stat_frequency: 4
+str: 12
+int: 9
+dex: 14
+levelup_stat_frequency: 3
 mutations:
   1:
     MUT_BEAK: 1
     MUT_TALONS: 3
+    MUT_ACUTE_VISION: 1
+    MUT_THIN_SKELETAL_STRUCTURE: 3
+    MUT_FAST: 1
   5:
     MUT_TENGU_FLIGHT: 1
+    MUT_CLARITY: 1
 recommended_jobs:
   - JOB_BERSERKER
   - JOB_WIZARD
