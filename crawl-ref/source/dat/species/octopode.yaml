@@ -9,8 +9,10 @@ difficulty_priority: 50
 aptitudes:
   xp: 0
   hp: -1
-  mp_mod: 0
-  mr: 3
+  mp_mod: 1
+  mr: 4
+  fighting: 1
+  unarmed_combat: 2
   armour: False
   stealth: 4
   spellcasting: -1
@@ -18,16 +20,19 @@ aptitudes:
   invocations: 1
   evocations: 1
 can_swim: true
-str: 7
-int: 10
-dex: 7
-levelup_stat_frequency: 5
+str: 9
+int: 11
+dex: 8
+levelup_stat_frequency: 4
 species_flags:
   - hairless
 mutations:
   1:
-    MUT_CAMOUFLAGE: 1
+    MUT_CAMOUFLAGE: 2
     MUT_GELATINOUS_BODY: 1
+    MUT_REGENERATION: 1
+    MUT_CLARITY: 1
+    MUT_POISON_RESISTANCE: 1
 fake_mutations:
   - long: You cannot wear most types of armour.
     short: almost no armour
