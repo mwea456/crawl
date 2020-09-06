@@ -25,7 +25,7 @@ aptitudes:
   invocations: 1
   # White Draconian specific
   fire_magic: -2
-  ice_magic: 2
+  ice_magic: 4
 str: 10
 int: 8
 dex: 6
@@ -35,8 +35,12 @@ mutations:
     MUT_COLD_BLOODED: 1
   7:
     MUT_COLD_RESISTANCE: 1
+    MUT_FREEZING_CLOUD_IMMUNITY: 1
+    MUT_ICEMAIL: 1
   14:
     MUT_BIG_WINGS: 1
+    MUT_COLD_RESISTANCE: 1
+    MUT_PASSIVE_FREEZE: 1
 fake_mutations:
   - long: You can breathe waves of freezing cold.
     short: breathe frost
