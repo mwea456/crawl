@@ -26,9 +26,9 @@ aptitudes:
   spellcasting: 3
   conjurations: 3
   hexes: 1
-  charms: 1
+  charms: 2
   summoning: 2
-  necromancy: 1
+  necromancy: 0
   translocations: 1
   transmutations: 1
   fire_magic: 1
@@ -36,9 +36,9 @@ aptitudes:
   air_magic: 5
   earth_magic: -3
   invocations: -1
-str: 12
-int: 9
-dex: 14
+str: 13
+int: 12
+dex: 15
 levelup_stat_frequency: 3
 mutations:
   1:
@@ -46,10 +46,11 @@ mutations:
     MUT_TALONS: 3
     MUT_ACUTE_VISION: 1
     MUT_THIN_SKELETAL_STRUCTURE: 3
-    MUT_FAST: 1
+    MUT_MAGIC_RESISTANCE: 2
   5:
     MUT_TENGU_FLIGHT: 1
     MUT_CLARITY: 1
+    MUT_DISTORTION_FIELD: 3
 recommended_jobs:
   - JOB_BERSERKER
   - JOB_WIZARD
